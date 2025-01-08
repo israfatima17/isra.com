@@ -3,43 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Isra Fatima</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        header {
+            background: #4a56e2;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .profile-section {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .profile-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #e1e1e1;
+            margin-top: 15px;
+        }
+
+        .profile-section h1 {
+            margin: 15px 0 5px;
+            color: #4a56e2;
+            font-size: 30px;
+        }
+
+        .profile-section h2 {
+            margin: 5px 0;
+            color: #555;
+            font-size: 22px;
+        }
+
+        .profile-section .location {
+            font-size: 16px;
+            margin: 5px 0;
+            color: #777;
+        }
+
+        .profile-section p {
+            font-size: 15px;
+            margin-top: 15px;
+        }
+
+        footer {
+            padding: 10px 30px;
+            font-size: 14px;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+            width: calc(100% - 60px); /* Avoiding footer overflow */
+        }
+
+        .footer-left {
+            color: #333;
+        }
+
+        .footer-right a {
+            color: #4a56e2;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
+
+<header>
+    <div class="navbar">
+        <img src="profile.jpg" alt="Profile Picture">
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li> <!-- Link to Home Page (index.html) -->
+                <li><a href="about.html">About</a></li> <!-- Link to About Page -->
+                <li><a href="work.html">Work</a></li> <!-- Link to Work Page -->
+                <li><a href="contact.html">Contact</a></li> <!-- Link to Contact Page -->
             </ul>
         </nav>
-    </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am [Your Name], a passionate web designer and developer.</p>
-    </section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
-    </section>
-    <section id="projects">
-        <h2>My Projects</h2>
-        <p>Coming Soon!</p>
-    </section>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: example@example.com</p>
-    </section>
-    <footer>
-        <p>&copy; 2025 [Your Name]. All rights reserved.</p>
-    </footer>
+    </div>
+</header>
+
+<div class="profile-section">
+    <h2></h2>
+    <img src="profile.jpg" alt="Profile Picture">
+    <h1>Isra Fatima</h1>
+    <h2>Developer & Designer</h2>
+    <p class="location">&#x1f4cc; Sukkur, Sindh</p>
+    <p>Hi, I'm Isra, and welcome to my personal website. This platform serves as an online CV, offering a clear overview of my skills, experience, and the work I do.</p>
+</div>
+
+<footer>
+    <div class="footer-left">&copy; 2025 | Isra Fatima</div>
+    <div class="footer-right"><a href="https://www.linkedin.com/in/isra-fatima-64b734286/">LinkedIn Profile</a></div>
+</footer>
+
 </body>
 </html>
