@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Isra Fatima</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to bottom, rgb(75, 97, 208) 80%, rgba(255, 255, 255, 0.3) 100%);
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .intro {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: center;
+            padding: 0 20px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .gallery-item h3 {
+            font-size: 22px;
+            margin: 15px 0 10px;
+            color: rgb(75, 97, 208);
+            font-weight: 600;
+        }
+
+        .gallery-item p {
+            font-size: 16px;
+            margin: 0 auto;
+            color: #555;
+            line-height: 1.6;
+            text-align: justify;
+            max-width: 90%;
+        }
+
+        .gallery-item a {
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 14px;
+            background-color: rgb(75, 97, 208);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .gallery-item a:hover {
+            background-color: #3b47c2;
+        }
+
+
+        .view-more {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        .view-more button {
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: rgb(75, 97, 208);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .view-more button:hover {
+            background-color: #3b47c2;
+        }
+
+        footer {
+            padding: 10px 20px;
+            font-size: 14px;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-right a {
+            color: rgb(75, 97, 208);
+            text-decoration: none;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <img src="profile.jpg" alt="Profile Picture">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="certificate.html">Certificate</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="intro">
+    <p>Since the beginning of my Computer Science journey, I have always had a creative mind. Here are some of my web designs and development projects that showcase my growth and learning in this field.</p>
+</div>
+
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="images/Capture.PNG" alt="Calculator Project">
+        <h3>Calculator Project</h3>
+        <p>This project was developed using HTML, CSS, and JavaScript. The main goal was to enhance my JavaScript skills while learning more about user interactions.</p>
+        <a href="https://github.com/israfatima17/calculator-app" target="_blank">GitHub Repository</a>
+    </div>
+    <div class="gallery-item">
+        <img src="images/recipe.jpg" alt="Recipe Sharing Platform">
+        <h3>Recipe Sharing Platform</h3>
+        <p>A React.js web app to explore, share, and submit recipes. Features Firebase authentication and responsive design.</p>
+        <a href="https://github.com/israfatima17/Recipe-Sharing-Platform" target="_blank">GitHub Repository</a>
+    </div>
+    <div class="gallery-item">
+        <img src="images/fyp.png" alt="Final Year Project">
+        <h3>Final Year Project</h3>
+        <p>A university alumni network built using <strong>React.js</strong> and <strong>Firebase</strong>. This platform allows alumni to connect and share updates, enhancing professional networking opportunities.</p>
+        <a href="https://github.com/israfatima17/FYP" target="_blank">GitHub Repository</a>
+    </div>
+</div>
+
+<div class="view-more">
+    <button onclick="window.location.href='projects.html'">View More</button>
+</div>
+
+<footer>
+    <div class="footer-left">&copy; 2025 | Isra Fatima</div>
+    <div class="footer-right">
+        <a href="https://www.linkedin.com/in/isra-fatima-64b734286/">LinkedIn Profile</a>
+    </div>
+</footer>
+
+</body>
+</html>
