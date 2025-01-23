@@ -26,7 +26,6 @@
         }
 
         .navbar {
-            width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -47,10 +46,6 @@
             gap: 20px;
         }
 
-        nav ul li {
-            display: inline;
-        }
-
         nav ul li a {
             color: white;
             text-decoration: none;
@@ -60,9 +55,9 @@
         /* Certificates Section */
         .certificates-section {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 50px 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 30px 20px;
             background-color: #ffffff;
             max-width: 1200px;
             margin: 0 auto;
@@ -91,6 +86,7 @@
         .certificate-card h3 {
             color: rgb(75, 97, 208);
             margin-top: 15px;
+            font-size: 18px;
         }
 
         .certificate-card p {
@@ -129,7 +125,29 @@
             color: rgb(75, 97, 208);
             text-decoration: none;
             font-size: 14px;
-            white-space: nowrap;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 768px) {
+            .certificates-section {
+                gap: 20px;
+                grid-template-columns: 1fr; /* One column for smaller screens */
+            }
+            .certificate-card img {
+                max-height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul li a {
+                font-size: 16px;
+            }
+            .certificate-card h3 {
+                font-size: 16px;
+            }
+            .certificate-card p {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -144,14 +162,12 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="work.html">Work</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                
                 <li><a href="projects.html">Project</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<!-- Certificates Section -->
 <!-- Certificates Section -->
 <div class="certificates-section">
     <div class="certificate-card">

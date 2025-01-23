@@ -17,47 +17,92 @@
         }
 
         header {
-    background: linear-gradient(to bottom, rgb(75, 97, 208) 80%, rgba(255, 255, 255, 0.3) 100%);
-    color: white;
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+            background: linear-gradient(to bottom, rgb(75, 97, 208) 80%, rgba(255, 255, 255, 0.3) 100%);
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
+        .navbar {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+        }
 
-.navbar {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Moves options to the right */
-}
+        .navbar img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
 
-.navbar img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 20px;
+        }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
 
-nav ul li {
-    display: inline;
-}
+        /* Hamburger Menu Button */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+        }
 
+        /* Dropdown Menu */
+        .nav-links.mobile {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            right: 30px;
+            background-color: rgb(75, 97, 208);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-links.mobile a {
+            padding: 10px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-links.mobile a:last-child {
+            border-bottom: none;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links.mobile.show {
+                display: flex;
+            }
+        }
 
         .profile-section {
             max-width: 700px;
@@ -65,8 +110,8 @@ nav ul li a {
             padding: 30px;
             background: white;
             border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow */
-            text-align: left; /* Left align content */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            text-align: left;
         }
 
         .profile-section img {
@@ -80,7 +125,7 @@ nav ul li a {
 
         .profile-section h1 {
             margin: 0;
-            color: rgb(75, 97, 208); /* Matching color */
+            color: rgb(75, 97, 208);
             font-size: 32px;
         }
 
@@ -97,24 +142,24 @@ nav ul li a {
         }
 
         footer {
-    padding: 10px 20px; /* Reduced padding for better fit */
-    font-size: 14px;
-    background-color: #f1f1f1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto;
-    width: 100%;
-    box-sizing: border-box; /* Prevent content overflow */
-    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1);
-}
+            padding: 10px 20px;
+            font-size: 14px;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1);
+        }
 
-.footer-right a {
-    color: rgb(75, 97, 208);
-    text-decoration: none;
-    font-size: 14px;
-    white-space: nowrap; /* Prevents wrapping to the next line */
-}
+        .footer-right a {
+            color: rgb(75, 97, 208);
+            text-decoration: none;
+            font-size: 14px;
+            white-space: nowrap;
+        }
     </style>
 </head>
 <body>
@@ -122,16 +167,30 @@ nav ul li a {
 <header>
     <div class="navbar">
         <img src="profile.jpg" alt="Profile Picture">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="work.html">Work</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="certificate.html">Certificate</a></li>
-                <li><a href="projects.html">Project</a></li>
-            </ul>
-        </nav>
+        <!-- Hamburger Menu -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="certificate.html">Certificate</a></li>
+            <li><a href="projects.html">Project</a></li>
+        </ul>
+        <!-- Mobile Links -->
+        <ul class="nav-links mobile">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="certificate.html">Certificate</a></li>
+            <li><a href="projects.html">Project</a></li>
+        </ul>
     </div>
 </header>
 
@@ -149,6 +208,13 @@ nav ul li a {
         <a href="https://www.linkedin.com/in/isra-fatima-64b734286/">LinkedIn Profile</a>
     </div>
 </footer>
+
+<script>
+    function toggleMenu() {
+        const mobileMenu = document.querySelector('.nav-links.mobile');
+        mobileMenu.classList.toggle('show');
+    }
+</script>
 
 </body>
 </html>
