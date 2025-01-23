@@ -57,6 +57,22 @@
             font-size: 18px;
         }
 
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            background-color: white;
+            height: 4px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
         .work-section {
             max-width: 900px;
             margin: 70px auto;
@@ -100,6 +116,40 @@
             font-size: 14px;
             white-space: nowrap;
         }
+
+        /* Mobile responsive styles */
+      /* Mobile responsive styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 200px; /* width of the side menu */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(75, 97, 208, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -107,96 +157,80 @@
 <header>
     <div class="navbar">
         <img src="profile.jpg" alt="Profile Picture">
-        <nav>
+        <nav id="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="certificate.html">Certificate</a></li>
                 <li><a href="projects.html">Project</a></li>
             </ul>
         </nav>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
 </header>
 
 <div class="work-section">
     <h1>My Work</h1>
 
-    <!-- Office Assistant Training -->
     <div class="work-item">
         <h2>Office Assistant Training</h2>
         <p><strong>Organization:</strong> NAVTTTC</p>
-        <p><strong>Details:</strong> Completed training in administrative support, focusing on Microsoft Office tools and professional communication. Gained practical skills in office management and documentation.</p>
+        <p><strong>Details:</strong> Completed training in administrative support, focusing on Microsoft Office tools and professional communication.</p>
     </div>
 
-    <!-- Freelance Graphic Designer -->
     <div class="work-item">
         <h2>Freelance Graphic Designer</h2>
-        <p><strong>Details:</strong> Created custom graphic designs for clients, including digital invitations, social media content, and branding materials. Proficient in tools like Canva and Adobe Photoshop, delivering visually compelling designs to meet clients' unique requirements. Developed a social media presence to attract clients, managing projects from concept to final design delivery.</p>
+        <p><strong>Details:</strong> Created custom graphic designs for clients, including digital invitations and branding materials.</p>
     </div>
 
-    <!-- Startup Project Contributor -->
     <div class="work-item">
         <h2>Startup Project Contributor</h2>
         <p><strong>Organization:</strong> National Startups Initiative</p>
-        <p><strong>Details:</strong> Developed a selected concept for an Art and Craft Platform empowering home-based women artisans by providing a marketplace to showcase and sell their work. Focused on user research and strategic planning to create a user-friendly, impactful solution for women entrepreneurs.</p>
+        <p><strong>Details:</strong> Developed a concept for an Art and Craft Platform, empowering women artisans.</p>
     </div>
 
-    <!-- Frontend Developer -->
     <div class="work-item">
         <h2>Frontend Developer</h2>
         <p><strong>Organization:</strong> Sukkur IBA University</p>
-        <p><strong>Details:</strong> Utilized HTML, CSS, and JavaScript to create visually appealing and responsive web pages that met client requirements. Coded using HTML, CSS, and JavaScript to develop features for both mobile and desktop platforms. Worked closely with UX/UI designers to translate their designs into functional web applications. Utilized version control systems such as Git to track changes throughout the development process.</p>
+        <p><strong>Details:</strong> Utilized HTML, CSS, and JavaScript to create responsive web pages.</p>
     </div>
 
-    <!-- Co-founder of Lead Generation Team -->
     <div class="work-item">
         <h2>Co-founder of Lead Generation Team</h2>
         <p><strong>Organization:</strong> Sukkur IBA University</p>
-        <p><strong>Details:</strong> Led and coordinated the National Extension Plan (NICS) project, achieving lead generation targets. Managed strategic planning and operational activities for quality-driven lead outcomes. Contributed to web development and design projects, focusing on frontend development using HTML, CSS, and JavaScript. Demonstrated leadership and effective communication with stakeholders, ensuring delivery of high-quality solutions.</p>
+        <p><strong>Details:</strong> Led lead generation targets for a National Extension Plan project.</p>
     </div>
 
-    <!-- Social Media Manager -->
     <div class="work-item">
         <h2>Social Media Manager</h2>
         <p><strong>Organization:</strong> Shaikh Ayaz University</p>
-        <p><strong>Details:</strong> Managed multiple social media platforms, ensuring a consistent brand voice and message. Monitored social media trends and emerging platforms, adopting new strategies to stay ahead of the competition. Boosted engagement rates with the creation of compelling and visually appealing content. Successfully built a loyal following by consistently sharing valuable content that resonated with the target audience.</p>
+        <p><strong>Details:</strong> Managed social media platforms and content creation for brand awareness.</p>
     </div>
 
-    <!-- Graphic Design Work at Waada Company -->
     <div class="work-item">
         <h2>Graphic Design Work at Waada Company</h2>
-        <p><strong>Details:</strong> Completed one month of graphic design work at Waada Company, creating visually appealing content for their branding and marketing campaigns.</p>
+        <p><strong>Details:</strong> Completed one month of graphic design work for branding and marketing campaigns.</p>
     </div>
 
-    <!-- Data Entry Work at Sistect Academy -->
     <div class="work-item">
         <h2>Data Entry Work at Sistect Academy</h2>
-        <p><strong>Details:</strong> Assisted in data entry tasks and documentation at Sistect Academy, helping maintain accurate records and information management.</p>
+        <p><strong>Details:</strong> Assisted in data entry tasks and documentation.</p>
     </div>
 
-    <!-- Online Business Graphic Design -->
     <div class="work-item">
         <h2>Graphic Design in My Online Business</h2>
-        <p><strong>Details:</strong> Created custom posters and other graphic design content for my own online business, focusing on digital marketing and branding solutions.</p>
+        <p><strong>Details:</strong> Created posters and graphic content for my online business.</p>
     </div>
 
-    <!-- New Section for Projects -->
     <div class="work-item">
         <h2>University and Personal Projects</h2>
-
-        <!-- FYP Project -->
         <h3>Final Year Project (FYP)</h3>
-        <p><strong>Details:</strong> This was my final year project at university. I focused on [brief description of your FYP project]. You can view the details and code on my GitHub: <a href="https://github.com/israfatima17/FYP" target="_blank">GitHub - FYP Project</a></p>
-
-        <!-- AI Project -->
-        <h3>AI Project</h3>
-        <p><strong>Details:</strong> This AI project explores [brief description]. Unfortunately, the local file path won't work for web access, but you can access it here after uploading: <a href="https://github.com/israfatima17/AI-Project" target="_blank">AI Project (GitHub link)</a> (Please upload it to GitHub or another platform to make it accessible online).</p>
-
-        <!-- Deep Learning - License Plate Detection -->
-        <h3>Deep Learning - License Plate Detection</h3>
-        <p><strong>Details:</strong> Developed a deep learning-based system for license plate detection. You can view the code and details on GitHub: [Include GitHub link here]</p>
+        <p><strong>Details:</strong> This was my final year project at university. View it on GitHub: <a href="https://github.com/israfatima17/FYP" target="_blank">GitHub - FYP Project</a></p>
     </div>
 </div>
 
@@ -204,6 +238,15 @@
     <div class="footer-left">&copy; 2025 | Isra Fatima</div>
     <div class="footer-right"><a href="https://www.linkedin.com/in/isra-fatima-64b734286/">LinkedIn Profile</a></div>
 </footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navbar = document.getElementById('navbar');
+
+    hamburger.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+    });
+</script>
 
 </body>
 </html>
