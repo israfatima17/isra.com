@@ -53,58 +53,10 @@
             font-size: 18px;
         }
 
-        /* Hamburger Menu */
-        .hamburger {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    margin-left: auto;  /* This aligns the hamburger menu to the right side */
-}
-
-        .hamburger div {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-        }
-
-        .nav-links {
-            display: flex;
-        }
-
-        .nav-links.mobile {
+        .menu-icon {
             display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 70px;
-            right: 30px;
-            background-color: rgb(75, 97, 208);
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        .nav-links.mobile a {
-            padding: 10px 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .nav-links.mobile a:last-child {
-            border-bottom: none;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-links.mobile.show {
-                display: flex;
-            }
+            font-size: 30px;
+            cursor: pointer;
         }
 
         /* Certificates Section */
@@ -191,6 +143,33 @@
             .certificate-card img {
                 max-height: 180px;
             }
+
+            .menu-icon {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background: linear-gradient(to bottom, rgb(75, 97, 208) 80%, rgba(255, 255, 255, 0.3) 100%);
+                padding: 10px;
+                border-radius: 10px;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                font-size: 18px;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
         }
 
         @media (max-width: 480px) {
@@ -211,11 +190,6 @@
 <header>
     <div class="navbar">
         <img src="profile.jpg" alt="Profile Picture">
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -224,13 +198,7 @@
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="projects.html">Project</a></li>
             </ul>
-            <ul class="nav-links mobile">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="work.html">Work</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="projects.html">Project</a></li>
-            </ul>
+            <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
         </nav>
     </div>
 </header>
@@ -314,8 +282,8 @@
 
 <script>
     function toggleMenu() {
-        const mobileMenu = document.querySelector('.nav-links.mobile');
-        mobileMenu.classList.toggle('show');
+        const menu = document.querySelector('nav ul');
+        menu.classList.toggle('show');
     }
 </script>
 
