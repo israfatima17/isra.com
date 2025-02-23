@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isra Fatima</title>
+    <title>My Designs - Isra Fatima</title>
     <style>
         body {
             margin: 0;
@@ -53,7 +53,6 @@
             font-size: 18px;
         }
 
-        /* Hamburger Menu Button */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -67,29 +66,6 @@
             background-color: white;
         }
 
-        /* Dropdown Menu */
-        .nav-links.mobile {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 70px;
-            right: 30px;
-            background-color: rgb(75, 97, 208);
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        .nav-links.mobile a {
-            padding: 10px 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .nav-links.mobile a:last-child {
-            border-bottom: none;
-        }
-
-        /* Responsive Styles */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -101,44 +77,36 @@
 
             .nav-links.mobile.show {
                 display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                right: 30px;
+                background-color: rgb(75, 97, 208);
+                padding: 10px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             }
         }
 
-        .profile-section {
-            max-width: 700px;
-            margin: 70px auto;
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
             padding: 30px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-            text-align: left;
+            max-width: 1000px;
+            margin: auto;
         }
 
-        .profile-section img {
-            float: left;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid #e1e1e1;
-            margin-right: 20px;
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
         }
 
-        .profile-section h1 {
-            margin: 0;
-            color: rgb(75, 97, 208);
-            font-size: 32px;
-        }
-
-        .profile-section h2 {
-            margin: 5px 0;
-            color: #555;
-            font-size: 22px;
-        }
-
-        .profile-section .location {
-            font-size: 16px;
-            color: #777;
-            margin-bottom: 15px;
+        .gallery img:hover {
+            transform: scale(1.05);
         }
 
         footer {
@@ -153,13 +121,6 @@
             box-sizing: border-box;
             box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1);
         }
-
-        .footer-right a {
-            color: rgb(75, 97, 208);
-            text-decoration: none;
-            font-size: 14px;
-            white-space: nowrap;
-        }
     </style>
 </head>
 <body>
@@ -167,13 +128,11 @@
 <header>
     <div class="navbar">
         <img src="profile.jpg" alt="Profile Picture">
-        <!-- Hamburger Menu -->
         <div class="hamburger" onclick="toggleMenu()">
             <div></div>
             <div></div>
             <div></div>
         </div>
-        <!-- Navigation Links -->
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -183,24 +142,26 @@
             <li><a href="projects.html">Project</a></li>
             <li><a href="Mydesigns.html">My Designs</a></li>
         </ul>
-        <!-- Mobile Links -->
-        <ul class="nav-links mobile">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="work.html">Work</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="certificate.html">Certificate</a></li>
-            <li><a href="projects.html">Project</a></li>
-        </ul>
     </div>
 </header>
 
-<div class="profile-section">
-    <img src="profile.jpg" alt="Profile Picture">
-    <h1>Isra Fatima</h1>
-    <h2>Developer & Designer</h2>
-    <p class="location">&#x1f4cc; Sukkur, Sindh</p>
-    <p>Welcome to my portfolio website, where you can explore my skills, experience, and professional journey.</p>
+<h2 style="text-align: center; margin-top: 30px; color: rgb(75, 97, 208);">My Designs</h2>
+<div class="gallery">
+    <img src="designs/1.jpg" alt="Design 1">
+    <img src="designs/2.jpg" alt="Design 2">
+    <img src="designs/3.jpg" alt="Design 3">
+    <img src="designs/4.jpg" alt="Design 4">
+    <img src="designs/5.jpg" alt="Design 5">
+    <img src="designs/6.jpg" alt="Design 6">
+    <img src="designs/7.jpg" alt="Design 7">
+    <img src="designs/8.jpg" alt="Design 8">
+    <img src="designs/9.jpg" alt="Design 9">
+    <img src="designs/10.jpg" alt="Design 10">
+    <img src="designs/11.jpg" alt="Design 11">
+    <img src="designs/12.jpg" alt="Design 12">
+    <img src="designs/13.jpg" alt="Design 13">
+    <img src="designs/14.webp" alt="Design 14">
+    <img src="designs/15.png" alt="Design 15">
 </div>
 
 <footer>
